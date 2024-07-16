@@ -23,9 +23,7 @@ public class Main {
 	    		   int sum = arr1[i][j]+arr2[i][j];
 	    		   System.out.print(sum+" ");
 	    	   }System.out.println();
-	       }
-	       
-	        
+	       }  
 	    }
 
 }
