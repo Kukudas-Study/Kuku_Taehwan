@@ -8,14 +8,11 @@ public class Main {
 		
 		for(int i=0; i<a.length()/2; i++) {
 			if(a.charAt(i) == a.charAt(a.length()-1-i)) {
-				continue;
-				
+				continue;	
 			}else {
 				c = 0;
 				break;
 			}
 		}System.out.println(c);
-		
-		
 	}
 }
