@@ -8,7 +8,6 @@ public class Main{
 		int num3 = sc.nextInt();
 		int a;
 		
-		
 		if (num1 == num2 && num2 ==num3) {
 			a = 10000+(num1*1000);
 		}else if(num1 == num2 || num1 == num3) {
@@ -24,7 +23,5 @@ public class Main{
 				a = num3*100;
 			}
 		}System.out.println(a);
-
-
-}
+	}
 }
