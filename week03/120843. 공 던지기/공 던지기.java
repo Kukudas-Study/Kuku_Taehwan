@@ -7,7 +7,6 @@ class Solution {
                 b = b%numbers.length;
             }
         }
-        
         return b;
     }
 }
