@@ -1,0 +1,32 @@
+```java
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		int M = sc.nextInt();
+		int[] bgn = new int[N];
+
+		for (int i = 0; i < N; i++) {
+			bgn[i] = i + 1;
+		}
+		for (int i = 0; i < M; i++) {
+			int a = sc.nextInt();
+			int b = sc.nextInt();
+			for (int j = a; j < b; j++) {
+				b--;
+				int c = bgn[j - 1];
+				int d = bgn[b-1];
+				bgn[j - 1] = bgn[b-1];
+				bgn[b - 1] = c;
+
+			}
+		}
+		for (int e = 0; e < N; e++) {
+			System.out.println(bgn[e] + " ");
+		}
+	}
+}
+```
