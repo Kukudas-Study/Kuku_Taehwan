@@ -17,14 +17,10 @@ public class Main {
 					count = i+1;
 					count2 = j+1;
 				}
-					
-				
 			}
 		}
-
 		System.out.println(max);
 		System.out.println(count +" "+count2);
-		
 	}
 
 }
