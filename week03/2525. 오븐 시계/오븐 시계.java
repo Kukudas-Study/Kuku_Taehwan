@@ -6,7 +6,7 @@ public class Main {
 		int A = sc.nextInt();
 		int B = sc.nextInt();
 		int C = sc.nextInt();
-		
+	
 		int h = 0;
 		int m = 0;
 		h = A+(B+C)/60;
