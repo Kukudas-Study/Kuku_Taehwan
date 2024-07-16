@@ -9,9 +9,7 @@ public class Main {
 		double sum=0;
 		
 		for(int i=0; i<subject.length; i++) {		
-			
 			subject[i]=sc.nextInt();
-			
 			if(max<subject[i]) {
 				max=subject[i];	
 			}
@@ -19,9 +17,8 @@ public class Main {
 		}
 		for (int i=0; i<subject.length; i++) {
 			sum += subject[i]/max*100;
-			
 		}
 		double avg = sum/subject.length;
 		System.out.println(avg);
-}
+	}
 }
