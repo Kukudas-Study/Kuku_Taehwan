@@ -11,18 +11,8 @@ public class Main {
 			if (max<a) {
 				max = a;
 				count = i;
-				
 			}
-			
-			
 		}System.out.println(max); 
 		 System.out.println(count); 
-		
-		
-		
-		
-		
-		
-
-}
+	}
 }
