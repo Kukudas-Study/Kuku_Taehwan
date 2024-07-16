@@ -16,9 +16,7 @@ public class Main {
 	        	}
 	        }for (int i =0; i<bgn.length; i++) {
 	        	System.out.println(bgn[i]);
-	        }
-	        
-	        
+	        }        
 	    }
 
 }
