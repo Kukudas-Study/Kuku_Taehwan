@@ -14,7 +14,7 @@ public class Main {
 			arr[i]= sc.nextInt();
 			sum = sum+arr[i];
 		}
-		Arrays.sort(arr);
+		Arrays.sort(arr);//a와 b를 index로 잡아주기에 오름차순으로 변경
 		for(int i =0; i<9; i++) {
 			for(int j =0; j<9; j++) {
 				if(sum - arr[i]-arr[j] == 100) {
@@ -25,7 +25,7 @@ public class Main {
 			}
 		}
 		for(int i =0; i<9; i++) {
-			if(i ==a || i==b) {
+			if(i ==a || i==b) {//범인이 나오면 지나가고 다시 반복
 				continue;
 			
 			}Arrays.sort(arr);
