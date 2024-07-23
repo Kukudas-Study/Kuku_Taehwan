@@ -1,0 +1,45 @@
+```java
+package ss;
+
+
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+	       Scanner sc = new Scanner(System.in);
+	       
+	       int n = sc.nextInt();
+	       int[] slicer = new int[3];
+	       int[] num_list = new int[sc.nextInt()];
+	       int[] arr = new int[1];
+	       
+	       for(int i=0; i<3; i++) {
+	    	   slicer[i]=sc.nextInt();
+	       }
+	       int a = slicer[0];
+	       int b = slicer[1];
+	       int c = slicer[2];
+	     
+	       for(int i=0; i<num_list.length; i++) {
+	    	   slicer[i]=sc.nextInt();
+	       }
+	       if(n == 1) {
+	    	   System.arraycopy(num_list, 0, arr , 0, b);
+	       }
+	       else if(n==2) {
+	    	   System.arraycopy(num_list, a, arr , 0, num_list.length);
+	       }
+	       else if(n==3) {
+	    	   System.arraycopy(num_list, a, arr , 0, b);
+	       }
+//	       else if(n==4) {
+//	    	   System.arraycopy(num_list, a, arr , 0, b);
+//	       }
+	     System.out.println(arr);  
+	    }
+		
+
+}//리스트 자르기
+
+//n =4 일 때 c만큼 띄우기 불가능
+```
