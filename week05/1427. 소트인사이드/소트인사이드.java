@@ -12,7 +12,7 @@ public class Main {
 			arr[i]= Integer.parseInt(String.valueOf(word.charAt(i)));//문자열을 정수로 변환 후 대입
 		}
 		Arrays.sort(arr);//배열 정렬
-		for(int i=0; i<arr.length/2;i++) {//정렬된 의 반만큼 재배열
+		for(int i=0; i<arr.length/2;i++) {//정렬된 배열의 반만큼 재배열
 			int tmp = arr[i];
 			arr[i] = arr[arr.length-i-1];
 			arr[arr.length-i-1] = tmp;
