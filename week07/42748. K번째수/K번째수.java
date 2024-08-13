@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
  
-class Solution {
+class Solution { 
     public int[] solution(int[] array, int[][] commands) {     
         
         List<Integer> li=new ArrayList<>();
