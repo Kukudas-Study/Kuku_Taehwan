@@ -1,0 +1,71 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) throws IOException {
+		List<Integer> li = new ArrayList<>();
+		Scanner sc=new Scanner(System.in);
+		int N = sc.nextInt();
+
+		int M = sc.nextInt();
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		
+		
+		String[][] arr = new String[N][M];
+		
+		for(int i=0;i<N;i++) {
+			String a=br.readLine();
+			for(int j=0;j<M; j++) {
+				arr[i][j] = String.valueOf(a.charAt(j)) ;
+
+			}
+		}
+		int a=100000000;
+		int count =0;
+		int count1 =0;
+		for(int i=0;i<N-7;i++) {
+			for(int j=0;j<M-7; j++) {
+				
+				for(int k=i; k<i+8; k++) {
+					for(int l=j; l<j+8; l++) {
+						if(arr[k][l].equals("B")) {
+							if((k+l)%2==0 && arr[k][l] !="B") {
+								count++;
+							}else if((k+l)%2==1 && arr[k][l] !="W") {
+								count++;
+							}
+							
+						}else if(arr[k][l].equals("W")){
+							if((k+l)%2==0 && arr[k][l] !="B") {
+								count1++;
+							}else if((k+l)%2==1 && arr[k][l] !="W") {
+								count1++;
+							}
+
+						}
+					}
+					
+					if(a >count &&count>=count1) {
+						a=count1;
+					}else {
+						a=count;
+					}
+					
+				}
+			}
+		}
+		
+		System.out.println(a);
+		
+		}
+}
