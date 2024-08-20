@@ -1,0 +1,97 @@
+package week5;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+
+public class Main {
+
+	public static void main(String[] args) throws IOException {
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		int find[][] = { { 1, 0 }, { 1, 1 }, { -1, 1 }, { 0, 1 } }; // 4방향 탐색
+		int arr[][] = new int[19][19]; // 오목판
+
+		for (int i = 0; i < 19; i++) {
+			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+			for (int j = 0; j < 19; j++) {
+				arr[i][j] = Integer.parseInt(st.nextToken());
+			}
+		}
+
+		for (int i = 0; i < 19; i++) {
+			for (int j = 0; j < 19; j++) {
+				int count = 0; // 연속된 흑돌의 개수
+				int count2 = 0; // 연속된 백돌의 개수
+				if (arr[i][j] == 1) {
+				
+					count++;
+					for (int k = 0; k < 4; k++) { // 오, 아, 왼아, 오아 방향 탐색
+
+						if (arr[i + k][j] == 1) {
+							count++;
+						} else if (arr[i][j + k] == 1) {
+							count++;
+						} else if (arr[i + k][j + k] == 1) {
+							count++;
+						} else if (arr[i + k][j - k] == 1) {
+							count++;
+						}
+						if (0 > j - k || j + k > 19 || i + k > 19)
+							continue;
+						if (count == 5) {
+							System.out.println(1);
+							System.out.println(i + " " + j);
+							break;
+						}
+
+//							int ni = i + find[k][0];
+//							int nj = j + find[k][1];
+//							if (0 > ni || 19 <= ni || 0 > nj || 19 <= nj)
+//								continue;
+//							if (ni == 1 || nj == 1) {
+//								count++;
+//								if (count == 5) {
+//									System.out.println(1);
+//									System.out.println(i + " " + j);
+//									break;
+//								} 
+
+					}
+				}
+				else if (arr[i][j] == 2) {
+					
+					count2++;
+					for (int k = 0; k < 4; k++) { // 오, 아, 왼아, 오아 방향 탐색
+
+						if (arr[i + k][j] == 2) {
+							count2++;
+						} else if (arr[i][j + k] == 2) {
+							count2++;
+						} else if (arr[i + k][j + k] == 2) {
+							count2++;
+						} else if (arr[i + k][j - k] == 2) {
+							count2++;
+						}
+						if (0 > j - k || j + k > 19 || i + k > 19)
+							continue;
+						if (count2 == 5) {
+							System.out.println(2);
+							System.out.println(i + " " + j);
+							break;
+						}
+					}
+				}
+			}
+			if(i==16) {
+				System.out.println(0);
+				break;
+			}
+		}
+	}
+
+}
